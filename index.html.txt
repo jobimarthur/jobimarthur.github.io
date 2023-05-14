@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minha Pessoa, vai ter cuzinho hoje?</title>
+    <style>
+        body {
+            background-color: #e7f157;
+            font-size: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .button-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button {
+            font-size: 24px;
+            display: inline-block;
+            background-color: #030577;
+            color: #eeff00;
+            border: 8px solid #ffffff;
+            padding: 30px;
+            cursor: pointer;
+            margin: 20px;
+        }
+        .fugir {
+            position: relative;
+        }
+        .centered-image {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <img class="centered-image" src="https://i.imgur.com/N0iMh7o.png" alt="My Image" style="max-width: 400px">
+    <h1>Minha Pessoa, vai ter cuzinho hoje?</h1>
+    <p>Selecione o botão abaixo:</p>
+    <div class="button-wrapper">
+        <div id="sim" class="button" onclick="parabens()">Sim</div>
+        <div id="nao" class="button fugir" onmousemove="fugirDoMouse()">Não</div>
+    </div>
+    <script>
+        function parabens() {
+            alert("Parabens! Pode ir colocando o plug anal <3 Te amo Minha Pessoa");
+        }
+        function fugirDoMouse() {
+            var nao = document.querySelector(".fugir");
+            var body = document.body;
+            var maxX = body.clientWidth - nao.offsetWidth;
+            var maxY = body.clientHeight - nao.offsetHeight;
+            var newX = Math.floor(Math.random() * (maxX - 50)) + 25;
+            var newY = Math.floor(Math.random() * (maxY - 50)) + 25;
+            nao.style.left = newX + "px";
+            nao.style.top = newY + "px";
+        }
+    </script>
+</body>
+</html>
+
+
